@@ -5,12 +5,12 @@ const findSecondLargest = (arr) => {
   for (const element of arr) {
     if (element > largest) {
       largest = element;
-    } else if (element > secondLargest) {
+    } else if (element < secondLargest && element > secondLargest) {
       secondLargest = element;
     }
   }
   return secondLargest;
 };
 
-const input = [10, 2, 100, 10, 40, 22, 99, 3];
+const input = [10, 2, 100, 10, 40, 22, 99, 3, 100];
 console.log(findSecondLargest(input));
