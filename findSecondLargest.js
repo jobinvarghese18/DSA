@@ -5,9 +5,7 @@ const findSecondLargest = (arr) => {
   for (const element of arr) {
     if (element > largest) {
       largest = element;
-    }
-
-    if (element < largest && element > secondLargest) {
+    } else if (element > secondLargest) {
       secondLargest = element;
     }
   }
