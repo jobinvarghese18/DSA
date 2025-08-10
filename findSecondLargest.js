@@ -1,9 +1,10 @@
 const findSecondLargest = (arr) => {
-  let largest = 0;
-  let secondLargest = 0;
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
 
   for (const element of arr) {
     if (element > largest) {
+      secondLargest = largest;
       largest = element;
     } else if (element < largest && element > secondLargest) {
       secondLargest = element;
@@ -12,5 +13,5 @@ const findSecondLargest = (arr) => {
   return secondLargest;
 };
 
-const input = [10, 2, 100, 10, 40, 22, 99, 3, 100];
+const input = [1, 30, 1, 40, 22, 100, 10];
 console.log(findSecondLargest(input));
